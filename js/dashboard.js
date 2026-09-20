@@ -341,13 +341,11 @@ function loadStats(deptText) {
   }
 
   if (essaysCount) {
-    essaysCount.textContent = `${
-      typeof ESSAYS !== "undefined" ? ESSAYS.length : 0
-    } Essays`;
+    essaysCount.textContent = typeof ESSAYS !== "undefined" ? ESSAYS.length : 0;
   }
 
   if (favCount) {
-    favCount.textContent = `${favoritesCount} Saved`;
+    favCount.textContent = favoritesCount;
   }
 
   if (libProgress) {
