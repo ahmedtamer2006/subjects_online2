@@ -558,107 +558,6 @@
                 <!-- ═══════════════════════════════════════════════════════════════ -->
                 <div id="pane-preferences" class="tab-pane-content hidden flex flex-col gap-6">
 
-                    <!-- Section: Player & Video Settings -->
-                    <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">
-                        <div class="flex items-center gap-3.5 mb-6">
-                            <div class="w-11 h-11 rounded-2xl bg-violet-500/10 dark:bg-violet-400/10 text-violet-600 dark:text-violet-400 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white">Player &amp; Video Quality</h3>
-                                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Configure playback speeds, seek jumps, and resolution defaults.</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-6">
-                            <!-- Playback Speed -->
-                            <div>
-                                <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">
-                                    Default Video Playback Speed
-                                </label>
-                                <div class="grid grid-cols-5 gap-2" id="speed-selector">
-                                    <button type="button" data-speed="1" class="option-pill-btn py-2.5 px-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 font-bold text-xs active">1.0x</button>
-                                    <button type="button" data-speed="1.25" class="option-pill-btn py-2.5 px-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 font-bold text-xs">1.25x</button>
-                                    <button type="button" data-speed="1.5" class="option-pill-btn py-2.5 px-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 font-bold text-xs">1.5x</button>
-                                    <button type="button" data-speed="1.75" class="option-pill-btn py-2.5 px-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 font-bold text-xs">1.75x</button>
-                                    <button type="button" data-speed="2" class="option-pill-btn py-2.5 px-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 font-bold text-xs">2.0x</button>
-                                </div>
-                            </div>
-
-                            <!-- Video Quality & Seek Duration Grid -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <!-- Preferred Video Quality -->
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">
-                                        Preferred Video Resolution
-                                    </label>
-                                    <div class="grid grid-cols-4 gap-2" id="quality-selector">
-                                        <button type="button" data-quality="auto" class="option-pill-btn py-2 px-2.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 active">Auto</button>
-                                        <button type="button" data-quality="1080" class="option-pill-btn py-2 px-2.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">1080p</button>
-                                        <button type="button" data-quality="720" class="option-pill-btn py-2 px-2.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">720p</button>
-                                        <button type="button" data-quality="480" class="option-pill-btn py-2 px-2.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">480p</button>
-                                    </div>
-                                </div>
-
-                                <!-- Double-Tap Seek Jump -->
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">
-                                        Double-Tap Seek Skip
-                                    </label>
-                                    <div class="grid grid-cols-3 gap-2" id="seek-selector">
-                                        <button type="button" data-seek="5" class="option-pill-btn py-2 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">5 sec</button>
-                                        <button type="button" data-seek="10" class="option-pill-btn py-2 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 active">10 sec</button>
-                                        <button type="button" data-seek="15" class="option-pill-btn py-2 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">15 sec</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section: Reading & Document Comfort -->
-                    <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">
-                        <div class="flex items-center gap-3.5 mb-6">
-                            <div class="w-11 h-11 rounded-2xl bg-amber-500/10 dark:bg-amber-400/10 text-amber-600 dark:text-amber-400 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white">Reading &amp; Document Preferences</h3>
-                                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Customize font sizes for summaries and PDF handling behavior.</p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <!-- Reading Font Size -->
-                            <div>
-                                <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">
-                                    Summary Reading Font Size
-                                </label>
-                                <div class="grid grid-cols-3 gap-2" id="font-size-selector">
-                                    <button type="button" data-font="normal" class="option-pill-btn py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 active">Normal (A)</button>
-                                    <button type="button" data-font="large" class="option-pill-btn py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">Large (A+)</button>
-                                    <button type="button" data-font="xl" class="option-pill-btn py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">XL (A++)</button>
-                                </div>
-                            </div>
-
-                            <!-- PDF Opening Mode -->
-                            <div>
-                                <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">
-                                    PDF Document Action
-                                </label>
-                                <div class="grid grid-cols-3 gap-2" id="pdf-mode-selector">
-                                    <button type="button" data-pdf="viewer" class="option-pill-btn py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 active">In-App</button>
-                                    <button type="button" data-pdf="tab" class="option-pill-btn py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">New Tab</button>
-                                    <button type="button" data-pdf="download" class="option-pill-btn py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">Direct DL</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Section: Dashboard & Experience Toggles -->
                     <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">
                         <div class="flex items-center gap-3.5 mb-6">
@@ -724,19 +623,6 @@
                                 </label>
                             </div>
 
-                            <!-- Interactive Sound Effects -->
-                            <div class="flex items-center justify-between py-3">
-                                <div>
-                                    <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Interactive Sound Effects</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Play celebratory sounds on quiz completion.</p>
-                                </div>
-                                <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
-                                    <input type="checkbox" id="pref-sounds-toggle" class="sr-only switch-toggle-input" checked>
-                                    <div class="w-12 h-6 bg-slate-300 dark:bg-slate-700 rounded-full transition-colors switch-toggle-bg">
-                                        <div class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out switch-toggle-dot mt-0.5 ml-0.5"></div>
-                                    </div>
-                                </label>
-                            </div>
 
                             <!-- Auto-Save Notes -->
                             <div class="flex items-center justify-between py-3">
@@ -780,42 +666,6 @@
                                 </label>
                             </div>
 
-                            <!-- Preferred Instructor Priority -->
-                            <div class="py-3 divide-y divide-slate-200/40 dark:divide-slate-700/40">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <button type="button" id="pref-instructor-expand-btn" class="p-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 hover:text-sky-500 transition-all cursor-pointer flex-shrink-0" title="Expand/Collapse Subject Doctors">
-                                            <svg id="pref-instructor-chevron" class="w-4 h-4 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-                                            </svg>
-                                        </button>
-                                        <div>
-                                            <div class="flex items-center gap-2">
-                                                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Prioritize Favorite Instructor</h4>
-                                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-sky-100 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400">Expandable ▾</span>
-                                            </div>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">Auto-sort sections by your preferred teacher for each subject.</p>
-                                        </div>
-                                    </div>
-                                    <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
-                                        <input type="checkbox" id="pref-instructor-priority-toggle" class="sr-only switch-toggle-input" checked>
-                                        <div class="w-12 h-6 bg-slate-300 dark:bg-slate-700 rounded-full transition-colors switch-toggle-bg">
-                                            <div class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out switch-toggle-dot mt-0.5 ml-0.5"></div>
-                                        </div>
-                                    </label>
-                                </div>
-
-                                <!-- Expandable Instructor Mapping Per Subject Accordion -->
-                                <div id="instructor-preferences-accordion" class="hidden pt-4 pb-2 space-y-3">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Select Preferred Doctor per Subject</span>
-                                        <span id="instructor-dept-tag" class="text-[10px] font-extrabold px-2.5 py-0.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 border border-sky-200/50">Accounting</span>
-                                    </div>
-                                    <div id="instructor-subjects-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-80 overflow-y-auto pr-1">
-                                        <!-- Populated dynamically by JS -->
-                                    </div>
-                                </div>
-                            </div>
 
                             <!-- Performance Mode -->
                             <div class="flex items-center justify-between py-3">
@@ -840,54 +690,6 @@
                 <!-- TAB 3: Interactive Student Tools (tab-tools)                    -->
                 <!-- ═══════════════════════════════════════════════════════════════ -->
                 <div id="pane-tools" class="tab-pane-content hidden flex flex-col gap-6">
-
-                    <!-- TOOL 1: Grade & Final Target Calculator -->
-                    <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">
-                        <div class="flex items-center gap-3.5 mb-5">
-                            <div class="w-11 h-11 rounded-2xl bg-amber-500/10 dark:bg-amber-400/10 text-amber-600 dark:text-amber-400 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white">Final Exam Target Calculator</h3>
-                                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Calculate exactly what score you need on your Final to secure your target grade.</p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Midterm Score (/20)</label>
-                                <input type="number" id="calc-midterm" min="0" max="20" value="16" class="settings-input w-full p-3 rounded-xl text-sm font-bold">
-                            </div>
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Coursework / Sheets (/10)</label>
-                                <input type="number" id="calc-coursework" min="0" max="10" value="9" class="settings-input w-full p-3 rounded-xl text-sm font-bold">
-                            </div>
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 ml-1">Desired Grade</label>
-                                <select id="calc-target-grade" class="settings-input w-full p-3 rounded-xl text-sm font-bold appearance-none cursor-pointer">
-                                    <option value="85">A+ Excellent (امتياز 85%)</option>
-                                    <option value="75">B+ Very Good (جيد جداً 75%)</option>
-                                    <option value="65">C Good (جيد 65%)</option>
-                                    <option value="50">Pass (مقبول 50%)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div id="calc-result-box" class="p-4 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50/50 dark:from-slate-800/80 dark:to-slate-800/40 border border-amber-200/80 dark:border-amber-500/30 flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-sm">
-                                    🎯
-                                </div>
-                                <div>
-                                    <p class="text-xs font-bold text-slate-700 dark:text-slate-300">Required Final Exam Mark (out of 70):</p>
-                                    <p id="calc-needed-score" class="font-heading font-extrabold text-xl text-amber-600 dark:text-amber-400">60 / 70</p>
-                                </div>
-                            </div>
-                            <span id="calc-difficulty-badge" class="px-3 py-1 rounded-xl text-xs font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300">Very Achievable</span>
-                        </div>
-                    </div>
 
                     <!-- TOOL 2: Sticky Study Scratchpad -->
                     <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">
@@ -984,59 +786,6 @@
                         </div>
                     </div>
 
-                    <!-- TOOL 5: Quick Practice Quiz Launcher & Bulk Pack -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                        <!-- Instant Quiz Launcher -->
-                        <div class="settings-card rounded-[2.25rem] p-6 sm:p-7 relative overflow-hidden">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center flex-shrink-0 font-bold">
-                                    ⚡
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white">Random Practice Quiz</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Launch a quick 5 or 10 question test.</p>
-                                </div>
-                            </div>
-                            <div class="space-y-3">
-                                <select id="quiz-launch-subject" class="settings-input w-full p-2.5 rounded-xl text-xs font-semibold appearance-none cursor-pointer">
-                                    <option value="Accounting">Financial Accounting</option>
-                                    <option value="Management">Business Management</option>
-                                    <option value="Economics">Macro Economics</option>
-                                    <option value="Statistics">Applied Statistics</option>
-                                </select>
-                                <button type="button" id="quiz-launch-btn" class="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs transition-all flex items-center justify-center gap-2">
-                                    <span>Start Rapid Quiz</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Bulk Pack Downloader -->
-                        <div class="settings-card rounded-[2.25rem] p-6 sm:p-7 relative overflow-hidden">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center flex-shrink-0 font-bold">
-                                    📦
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-sm text-slate-900 dark:text-white">Bulk Subject Pack</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Batch-access all summaries at once.</p>
-                                </div>
-                            </div>
-                            <div class="space-y-3">
-                                <select id="pack-subject-select" class="settings-input w-full p-2.5 rounded-xl text-xs font-semibold appearance-none cursor-pointer">
-                                    <option value="library.html">All Semester Summaries Pack</option>
-                                    <option value="quizzes.html">Complete Question Bank Pack</option>
-                                    <option value="essays.html">Essay &amp; Case Study Pack</option>
-                                </select>
-                                <button type="button" id="pack-open-btn" class="w-full py-3 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs transition-all flex items-center justify-center gap-2">
-                                    <span>Open Material Pack</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
 
                 </div>
 
