@@ -250,7 +250,7 @@ function setupFormValidation() {
 
         // --- SUCCESS STATE ---
         const selectedDeptText = deptInput.options[deptInput.selectedIndex].text;
-        const newUID = 'manual-' + Date.now();
+        const newUID = 'manual_' + encodeURIComponent(name.toLowerCase()).replace(/%/g, '_');
 
         // Save manual session so requireAuth() passes on dashboard
         localStorage.setItem('subjectsOnlineName',        nameInput.value.trim());

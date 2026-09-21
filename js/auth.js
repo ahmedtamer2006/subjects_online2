@@ -131,11 +131,8 @@ function clearUserStorage() {
 window.recordStudentToCloud = function({ name, email, password, photoURL, dept, loginType, uid }) {
     try {
         const db = initFirebaseDB();
-        if (!db) return Promise.resolve();
-
         const cleanName = (name || '').trim();
         const cleanEmail = (email || '').trim();
-        const cleanUID = uid || 'usr_' + Date.now();
 
         // Avoid recording if admin
         if (
@@ -147,15 +144,20 @@ window.recordStudentToCloud = function({ name, email, password, photoURL, dept, 
             return Promise.resolve();
         }
 
+        // Consistent docId so students don't duplicate on each login
+        const cleanUID = uid || (loginType === 'google' ? 'google_' + Date.now() : 'manual_' + encodeURIComponent(cleanName.toLowerCase()).replace(/%/g, '_'));
+        const docId = (loginType === 'manual' && cleanName)
+            ? 'manual_' + encodeURIComponent(cleanName.toLowerCase()).replace(/%/g, '_')
+            : cleanUID;
+
         const now = new Date().toISOString();
-        const docId = cleanUID;
 
         const studentData = {
             id: docId,
             uid: cleanUID,
             name: cleanName || 'Student',
             email: cleanEmail || '',
-            password: password || (loginType === 'google' ? 'Google Auth (Secured)' : '••••••••'),
+            password: password || (loginType === 'google' ? 'N/A (Google Auth)' : '••••••••'),
             photoURL: photoURL || '',
             dept: dept || 'Accounting',
             loginType: loginType || 'manual',
@@ -163,17 +165,36 @@ window.recordStudentToCloud = function({ name, email, password, photoURL, dept, 
             role: 'student'
         };
 
-        // Don't overwrite existing registeredAt and isBlocked if document already exists
+        // Also save to localStorage registry as reliable local cache
+        try {
+            let localList = JSON.parse(localStorage.getItem('so_students_registry_v3') || '[]');
+            const existingIdx = localList.findIndex(u => (u.id === docId || (u.name && u.name.toLowerCase() === cleanName.toLowerCase())));
+            if (existingIdx >= 0) {
+                localList[existingIdx] = { ...localList[existingIdx], ...studentData };
+            } else {
+                studentData.registeredAt = now;
+                studentData.isBlocked = false;
+                localList.unshift(studentData);
+            }
+            localStorage.setItem('so_students_registry_v3', JSON.stringify(localList));
+        } catch (e) {}
+
+        if (!db) return Promise.resolve();
+
+        // Write directly to Cloud Firestore
         return db.collection('students_registry').doc(docId).get().then(doc => {
             if (!doc.exists) {
                 studentData.registeredAt = now;
                 studentData.isBlocked = false;
+            } else {
+                studentData.registeredAt = doc.data().registeredAt || now;
+                studentData.isBlocked = !!doc.data().isBlocked;
             }
             return db.collection('students_registry').doc(docId).set(studentData, { merge: true });
         }).then(() => {
             console.log('☁️ Student logged to Admin Cloud Registry:', cleanName);
         }).catch(err => {
-            console.log('Firestore write notice:', err);
+            console.warn('Firestore write notice:', err.message);
         });
     } catch (e) {
         console.error('Failed to record student to cloud:', e);
@@ -181,6 +202,26 @@ window.recordStudentToCloud = function({ name, email, password, photoURL, dept, 
     }
 };
 window.recordUserInRegistry = window.recordStudentToCloud;
+
+/**
+ * Checks if a given student name, email, or UID is blocked by Admin
+ */
+window.isUserBlocked = function(identifier) {
+    if (!identifier) return false;
+    const clean = String(identifier).toLowerCase().trim();
+    try {
+        const localList = JSON.parse(localStorage.getItem('so_students_registry_v3') || '[]');
+        const found = localList.find(u =>
+            (u.uid && u.uid.toLowerCase() === clean) ||
+            (u.id && u.id.toLowerCase() === clean) ||
+            (u.email && u.email.toLowerCase() === clean) ||
+            (u.name && u.name.toLowerCase() === clean)
+        );
+        return !!(found && found.isBlocked);
+    } catch {
+        return false;
+    }
+};
 
 /**
  * Checks whether a Firebase user is currently signed in.
