@@ -914,7 +914,7 @@
         const name    = isAnon ? ANON_DISPLAY : escHtml(data.authorName || 'Student');
         const initial = isAnon ? ANON_EMOJI : (data.authorName?.[0]?.toUpperCase() || 'S');
         const time    = data.timestamp ? timeAgo(data.timestamp.toDate()) : 'just now';
-        
+
         let currentViews = data.views || 0;
         const viewedPosts = JSON.parse(localStorage.getItem('subjectsOnlineViewedPosts') || '[]');
         if (!viewedPosts.includes(postId)) {

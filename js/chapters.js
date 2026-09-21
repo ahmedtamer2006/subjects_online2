@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const clickHandler = isPdf ? ('onclick="markLectureDone(event, this, ' + lec.id + ')"') : '';
 
-                const inLib = isPdf && offlineLib.some(item => 
+                const inLib = isPdf && offlineLib.some(item =>
                     (item.subjectId === subjectId && String(item.lecId) === String(lec.id)) ||
                     (item.title === lec.title && item.url === lec.url) ||
                     (item.id === (subjectId + '_' + lec.id))
@@ -398,13 +398,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Progress Tooltip Logic
     const progressWrapper = document.getElementById('progress-ring-wrapper');
     const progressTooltip = document.getElementById('progress-tooltip');
-    
+
     if (progressWrapper && progressTooltip) {
         progressWrapper.addEventListener('mouseenter', () => {
             let pdfTotal = 0, pdfDone = 0;
             let vidTotal = 0, vidDone = 0;
             const completed = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
-            
+
             chapters.forEach(ch => {
                 (ch.lectures || []).forEach(lec => {
                     if (lec.type === 'pdf') {
@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const pdfTooltipSpan = document.getElementById('tooltip-pdfs');
             const vidTooltipSpan = document.getElementById('tooltip-videos');
-            
+
             if (pdfTooltipSpan) pdfTooltipSpan.textContent = pdfDone + ' / ' + pdfTotal;
             if (vidTooltipSpan) vidTooltipSpan.textContent = vidDone + ' / ' + vidTotal;
 

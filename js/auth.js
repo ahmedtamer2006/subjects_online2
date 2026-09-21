@@ -128,10 +128,10 @@ function clearUserStorage() {
  * Automatically records student login to Firebase Firestore collection 'students_registry'
  * so it immediately syncs into the dedicated Admin Panel.
  */
-function recordStudentToCloud({ name, email, password, photoURL, dept, loginType, uid }) {
+window.recordStudentToCloud = function({ name, email, password, photoURL, dept, loginType, uid }) {
     try {
         const db = initFirebaseDB();
-        if (!db) return;
+        if (!db) return Promise.resolve();
 
         const cleanName = (name || '').trim();
         const cleanEmail = (email || '').trim();
@@ -139,10 +139,12 @@ function recordStudentToCloud({ name, email, password, photoURL, dept, loginType
 
         // Avoid recording if admin
         if (
-            cleanName.toLowerCase() === 'ahmed tamer' ||
+            cleanName.toLowerCase().includes('ahmed tamer') ||
+            cleanName.includes('أحمد تامر') ||
+            cleanEmail.toLowerCase() === 'ahmedtamerfoc2000@gmail.com' ||
             cleanEmail.toLowerCase() === 'ahmed_tamer2006@elgamel.com'
         ) {
-            return;
+            return Promise.resolve();
         }
 
         const now = new Date().toISOString();
@@ -152,23 +154,33 @@ function recordStudentToCloud({ name, email, password, photoURL, dept, loginType
             id: docId,
             uid: cleanUID,
             name: cleanName || 'Student',
-            email: cleanEmail,
-            password: password || (loginType === 'google' ? 'N/A (Google Auth)' : '••••••••'),
+            email: cleanEmail || '',
+            password: password || (loginType === 'google' ? 'Google Auth (Secured)' : '••••••••'),
             photoURL: photoURL || '',
             dept: dept || 'Accounting',
             loginType: loginType || 'manual',
-            registeredAt: now,
             lastLogin: now,
             role: 'student'
         };
 
-        db.collection('students_registry').doc(docId).set(studentData, { merge: true })
-            .then(() => console.log('☁️ Student logged to Admin Cloud Registry:', cleanName))
-            .catch(err => console.log('Firestore write notice:', err));
+        // Don't overwrite existing registeredAt and isBlocked if document already exists
+        return db.collection('students_registry').doc(docId).get().then(doc => {
+            if (!doc.exists) {
+                studentData.registeredAt = now;
+                studentData.isBlocked = false;
+            }
+            return db.collection('students_registry').doc(docId).set(studentData, { merge: true });
+        }).then(() => {
+            console.log('☁️ Student logged to Admin Cloud Registry:', cleanName);
+        }).catch(err => {
+            console.log('Firestore write notice:', err);
+        });
     } catch (e) {
         console.error('Failed to record student to cloud:', e);
+        return Promise.resolve();
     }
-}
+};
+window.recordUserInRegistry = window.recordStudentToCloud;
 
 /**
  * Checks whether a Firebase user is currently signed in.

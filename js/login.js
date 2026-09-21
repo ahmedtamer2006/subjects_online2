@@ -4,7 +4,7 @@
    =================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Initial GSAP Intro Animation
     initIntroAnimation();
 
@@ -27,16 +27,16 @@ function initIntroAnimation() {
     const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
     // Header fades down
-    tl.fromTo('.login-header', 
+    tl.fromTo('.login-header',
         { y: -30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.5, clearProps: 'transform' }, 
+        { y: 0, opacity: 1, duration: 1.5, clearProps: 'transform' },
         0.2
     );
 
     // Card fades up
-    tl.fromTo('.login-card', 
+    tl.fromTo('.login-card',
         { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.5, clearProps: 'transform' }, 
+        { y: 0, opacity: 1, duration: 1.5, clearProps: 'transform' },
         0.5
     );
 }
@@ -50,7 +50,7 @@ function setupFormValidation() {
     const nameInput = document.getElementById('user-name');
     const nameErrorMsg = document.getElementById('name-error');
     const nameValidIcon = document.getElementById('name-valid-icon');
-    
+
     const passInput = document.getElementById('user-password');
     const passErrorMsg = document.getElementById('password-error');
     const passValidIcon = document.getElementById('password-valid-icon');
@@ -128,7 +128,7 @@ function setupFormValidation() {
         try {
             // 3. Open Google popup via Firebase
             const result = await signInWithGoogle();
-            
+
             // Check if user is blocked by admin
             if (typeof isUserBlocked === 'function' && (isUserBlocked(result.user.email) || isUserBlocked(result.user.displayName) || isUserBlocked(result.user.uid))) {
                 googleBtn.disabled = false;
@@ -207,9 +207,9 @@ function setupFormValidation() {
             nameErrorMsg.classList.remove('hidden');
             nameInput.classList.remove('border-blue-200', 'focus:ring-blue-500/50');
             nameInput.classList.add('border-red-400', 'focus:ring-red-500/50', 'ring-2', 'ring-red-500/50');
-            
-            gsap.fromTo(nameInput, 
-                { x: -5 }, 
+
+            gsap.fromTo(nameInput,
+                { x: -5 },
                 { x: 5, duration: 0.05, yoyo: true, repeat: 5, ease: 'none', onComplete: () => gsap.set(nameInput, {x: 0}) }
             );
         }
@@ -220,9 +220,9 @@ function setupFormValidation() {
             passErrorMsg.classList.remove('hidden');
             passInput.classList.remove('border-blue-200', 'focus:ring-blue-500/50');
             passInput.classList.add('border-red-400', 'focus:ring-red-500/50', 'ring-2', 'ring-red-500/50');
-            
-            gsap.fromTo(passInput, 
-                { x: -5 }, 
+
+            gsap.fromTo(passInput,
+                { x: -5 },
                 { x: 5, duration: 0.05, yoyo: true, repeat: 5, ease: 'none', onComplete: () => gsap.set(passInput, {x: 0}) }
             );
         }
@@ -233,9 +233,9 @@ function setupFormValidation() {
             deptErrorMsg.classList.remove('hidden');
             deptInput.classList.remove('border-blue-200', 'focus:ring-blue-500/50');
             deptInput.classList.add('border-red-400', 'focus:ring-red-500/50', 'ring-2', 'ring-red-500/50');
-            
-            gsap.fromTo(deptInput, 
-                { x: -5 }, 
+
+            gsap.fromTo(deptInput,
+                { x: -5 },
                 { x: 5, duration: 0.05, yoyo: true, repeat: 5, ease: 'none', onComplete: () => gsap.set(deptInput, {x: 0}) }
             );
         }
@@ -280,13 +280,13 @@ function triggerCreativeLoader(departmentName) {
     const loader = document.getElementById('creative-loader');
     const loginCard = document.querySelector('.login-card');
     const loginHeader = document.querySelector('.login-header');
-    
+
     // 1. Hide Form smoothly
-    gsap.to([loginCard, loginHeader], { 
-        y: -30, 
-        opacity: 0, 
-        duration: 0.6, 
-        ease: 'power3.in' 
+    gsap.to([loginCard, loginHeader], {
+        y: -30,
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power3.in'
     });
 
     // 2. Show Loader
@@ -304,7 +304,7 @@ function triggerCreativeLoader(departmentName) {
         "Preparing Your Modules...",
         "Almost Ready..."
     ];
-    
+
     let tl = gsap.timeline({ delay: 1 });
     phrases.forEach((phrase) => {
         tl.to(statusText, { opacity: 0, y: -10, duration: 0.3 })

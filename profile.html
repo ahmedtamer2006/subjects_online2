@@ -9,7 +9,7 @@
     <!-- Page Transition Script -->
     <script src="js/page-transition.js"></script>
     <link rel="stylesheet" href="css/tailwind-utilities.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -192,27 +192,18 @@
         <!-- HEADER SECTION -->
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
             <div>
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-600 dark:text-sky-400 text-xs font-bold tracking-wide uppercase mb-3">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                        </path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                    <span>User Hub &amp; Tools</span>
-                </div>
                 <h1 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                     Account Settings
                 </h1>
             </div>
 
-            <a href="dashboard.html"
+            <!-- <a href="dashboard.html"
                 class="inline-flex items-center gap-2 bg-white/80 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-semibold py-3 px-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm transition-all hover:shadow-md hover:-translate-x-1 self-start md:self-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
                 <span>Back to Dashboard</span>
-            </a>
+            </a> -->
         </div>
 
         <!-- NAVIGATION TABS -->
@@ -295,7 +286,7 @@
 
                     <!-- Remove Photo Button (shown only when custom photo exists) -->
                     <button id="avatar-remove" type="button"
-                        class="hidden w-full mb-3 py-2.5 px-4 rounded-xl text-xs font-semibold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30 hover:bg-rose-100 dark:hover:bg-rose-900/40 border border-rose-200 dark:border-rose-900/50 transition-all flex items-center justify-center gap-2">
+                        class="hidden w-full mb-3 mt-5 py-2.5 px-4 rounded-xl text-xs font-semibold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30 hover:bg-rose-100 dark:hover:bg-rose-900/40 border border-rose-200 dark:border-rose-900/50 transition-all flex items-center justify-center gap-2">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
@@ -354,24 +345,6 @@
                             </svg>
                         </a>
 
-                        <a href="community.html"
-                            class="flex items-center justify-between p-3 rounded-xl bg-white/60 dark:bg-slate-800/60 hover:bg-indigo-50 dark:hover:bg-slate-700/80 border border-slate-200/60 dark:border-slate-700/60 transition-all group">
-                            <div class="flex items-center gap-2.5">
-                                <div class="w-8 h-8 rounded-lg bg-indigo-500 text-white flex items-center justify-center">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="text-xs font-bold text-slate-800 dark:text-slate-200">Batch Q&amp;A Community</p>
-                                    <p class="text-[10px] text-slate-400">Ask &amp; Discuss with peers</p>
-                                </div>
-                            </div>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
                     </div>
                 </div>
 
@@ -395,7 +368,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white">Personal &amp; Academic Identity</h3>
+                                <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white">Personal Information</h3>
                                 <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Update your student name, department, and active term.</p>
                             </div>
                         </div>
@@ -435,11 +408,11 @@
                                         </div>
                                         <select id="profile-dept" required
                                             class="settings-input w-full text-sm font-medium rounded-2xl pl-12 pr-10 py-3.5 appearance-none cursor-pointer">
-                                            <option value="Accounting">Accounting (محاسبة)</option>
-                                            <option value="Business Administration">Business Administration (إدارة أعمال)</option>
-                                            <option value="Economics">Economics (اقتصاد)</option>
-                                            <option value="Statistics">Statistics (إحصاء)</option>
-                                            <option value="Financial & Customs Studies">Financial &amp; Customs Studies (دراسات مالية وجمركية)</option>
+                                            <option value="Accounting">Accounting</option>
+                                            <option value="Business Administration">Business</option>
+                                            <option value="Economics">Economics</option>
+                                            <option value="Statistics">Statistics</option>
+                                            <option value="Financial & Customs Studies">Financial &amp; Customs Studies</option>
                                         </select>
                                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -458,12 +431,12 @@
                                         <button type="button" data-semester="1"
                                             class="option-pill-btn py-2 px-3 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center justify-center gap-1.5 active">
                                             <span>Term 1</span>
-                                            <span class="text-[10px] opacity-75">(الأول)</span>
+                                            <span class="text-[10px] opacity-75"></span>
                                         </button>
                                         <button type="button" data-semester="2"
                                             class="option-pill-btn py-2 px-3 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center justify-center gap-1.5">
                                             <span>Term 2</span>
-                                            <span class="text-[10px] opacity-75">(الثاني)</span>
+                                            <span class="text-[10px] opacity-75"></span>
                                         </button>
                                     </div>
                                 </div>
@@ -579,10 +552,9 @@
                                 <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">Default Landing Page</label>
                                 <select id="pref-landing-page" class="settings-input w-full text-xs font-semibold rounded-xl p-3 appearance-none cursor-pointer">
                                     <option value="dashboard.html">Dashboard</option>
-                                    <option value="browse.html">Browse / Explore (البرواز / المواد)</option>
-                                    <option value="library.html">Library (الملخصات)</option>
-                                    <option value="quizzes.html">Quizzes (الكويزات)</option>
-                                    <option value="community.html">Community (المجتمع)</option>
+                                    <option value="browse.html">Browse</option>
+                                    <option value="library.html">Library</option>
+                                    <option value="favorites.html.html">Favorites</option>
                                 </select>
                             </div>
 
@@ -590,8 +562,8 @@
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2 ml-1">Card View Density</label>
                                 <select id="pref-view-density" class="settings-input w-full text-xs font-semibold rounded-xl p-3 appearance-none cursor-pointer">
-                                    <option value="comfortable">Comfortable (مريح)</option>
-                                    <option value="compact">Compact (مضغوط)</option>
+                                    <option value="comfortable">Comfortable</option>
+                                    <option value="compact">Compact</option>
                                 </select>
                             </div>
 
@@ -613,7 +585,6 @@
                             <div class="flex items-center justify-between py-3">
                                 <div>
                                     <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Autoplay Next Content</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Proceed to next section upon completion.</p>
                                 </div>
                                 <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
                                     <input type="checkbox" id="pref-autoplay-toggle" class="sr-only switch-toggle-input" checked>
@@ -628,7 +599,6 @@
                             <div class="flex items-center justify-between py-3">
                                 <div>
                                     <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Auto-Save Study Notes</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Save every written note instantly in real time.</p>
                                 </div>
                                 <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
                                     <input type="checkbox" id="pref-autosave-notes-toggle" class="sr-only switch-toggle-input" checked>
@@ -642,7 +612,6 @@
                             <div class="flex items-center justify-between py-3">
                                 <div>
                                     <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Keyboard Shortcuts</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Enable hotkeys (Space to pause, F for full-screen, M to mute).</p>
                                 </div>
                                 <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
                                     <input type="checkbox" id="pref-shortcuts-toggle" class="sr-only switch-toggle-input" checked>
@@ -652,26 +621,10 @@
                                 </label>
                             </div>
 
-                            <!-- Hide Completed Sections -->
-                            <div class="flex items-center justify-between py-3">
-                                <div>
-                                    <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Hide Completed Sections</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Show only pending/incomplete study items on dashboard.</p>
-                                </div>
-                                <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
-                                    <input type="checkbox" id="pref-hide-completed-toggle" class="sr-only switch-toggle-input">
-                                    <div class="w-12 h-6 bg-slate-300 dark:bg-slate-700 rounded-full transition-colors switch-toggle-bg">
-                                        <div class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out switch-toggle-dot mt-0.5 ml-0.5"></div>
-                                    </div>
-                                </label>
-                            </div>
-
-
                             <!-- Performance Mode -->
                             <div class="flex items-center justify-between py-3">
                                 <div>
                                     <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Performance / Low Motion Mode</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Reduce animation load for faster mobile browsing.</p>
                                 </div>
                                 <label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
                                     <input type="checkbox" id="pref-motion-toggle" class="sr-only switch-toggle-input">
@@ -690,34 +643,6 @@
                 <!-- TAB 3: Interactive Student Tools (tab-tools)                    -->
                 <!-- ═══════════════════════════════════════════════════════════════ -->
                 <div id="pane-tools" class="tab-pane-content hidden flex flex-col gap-6">
-
-                    <!-- TOOL 2: Sticky Study Scratchpad -->
-                    <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-11 h-11 rounded-2xl bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-heading text-lg font-bold text-slate-900 dark:text-white">Quick Study Scratchpad</h3>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Auto-saved persistent notes synchronized across your devices.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <button type="button" id="scratchpad-copy-btn" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-sky-500 text-xs font-bold transition-all" title="Copy Notes">Copy</button>
-                                <button type="button" id="scratchpad-clear-btn" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-rose-500 text-xs font-bold transition-all" title="Clear Scratchpad">Clear</button>
-                            </div>
-                        </div>
-
-                        <div class="relative">
-                            <textarea id="scratchpad-textarea" rows="4"
-                                class="settings-input w-full p-4 rounded-2xl text-sm font-medium leading-relaxed resize-none"
-                                placeholder="Type quick notes, professor hints, or formulas here..."></textarea>
-                            <span id="scratchpad-status" class="absolute bottom-3 right-4 text-[10px] font-semibold text-slate-400">Auto-saved</span>
-                        </div>
-                    </div>
 
                     <!-- TOOL 3: Custom Study Bookmarks & Resources -->
                     <div class="settings-card rounded-[2.25rem] p-7 sm:p-9 relative overflow-hidden">

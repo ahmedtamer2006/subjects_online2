@@ -22,7 +22,7 @@
     const isMobile = window.innerWidth <= 768 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
     overlay.style.transition = isMobile ? 'opacity 0.1s ease' : 'opacity 0.3s ease-in-out';
     overlay.style.pointerEvents = 'none';
-    
+
     // Append it to html element as early as possible
     document.documentElement.appendChild(overlay);
 
@@ -40,9 +40,9 @@
     document.addEventListener("click", (e) => {
         const link = e.target.closest("a");
         if (!link) return;
-        
+
         const href = link.getAttribute("href");
-        
+
         // Ignore links that shouldn't transition (hashes, external, new tabs, js)
         if (!href || href.startsWith("#") || href.startsWith("javascript:") || link.getAttribute("target") === "_blank" ||
             (link.hostname && link.hostname !== window.location.hostname)) {

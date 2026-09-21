@@ -29,7 +29,7 @@ function getUsersRegistry() {
         let list = JSON.parse(stored);
         if (!Array.isArray(list)) list = [];
         // Strictly exclude admin accounts from the student list
-        return list.filter(u => 
+        return list.filter(u =>
             !(u.email && u.email.toLowerCase() === 'ahmed_tamer2006@elgamel.com') &&
             !(u.name && u.name.toLowerCase() === 'ahmed tamer') &&
             u.role !== 'admin'
@@ -84,7 +84,7 @@ window.recordUserInRegistry = function ({ name, email, password, photoURL, dept,
         const currentLoginType = loginType || 'manual';
 
         // Check if student already exists
-        const existingIdx = registry.findIndex(u => 
+        const existingIdx = registry.findIndex(u =>
             (currentUID && u.uid === currentUID) ||
             (currentEmail && u.email && u.email.toLowerCase() === currentEmail.toLowerCase()) ||
             (currentStudentName && u.name && u.name.toLowerCase() === currentStudentName.toLowerCase())
@@ -146,7 +146,7 @@ window.isUserBlocked = function (identifier) {
     if (!identifier) return false;
     const registry = getUsersRegistry();
     const cleanId = String(identifier).toLowerCase().trim();
-    const found = registry.find(u => 
+    const found = registry.find(u =>
         (u.uid && u.uid.toLowerCase() === cleanId) ||
         (u.email && u.email.toLowerCase() === cleanId) ||
         (u.name && u.name.toLowerCase() === cleanId) ||
@@ -254,7 +254,7 @@ function renderAdminUserTable() {
     // 1. Apply Search Filter
     if (adminSearchQuery.trim()) {
         const q = adminSearchQuery.toLowerCase().trim();
-        registry = registry.filter(u => 
+        registry = registry.filter(u =>
             (u.name && u.name.toLowerCase().includes(q)) ||
             (u.email && u.email.toLowerCase().includes(q)) ||
             (u.password && u.password.toLowerCase().includes(q)) ||
@@ -310,7 +310,7 @@ function renderAdminUserTable() {
         const isGoogle = user.loginType === 'google';
         const isBlocked = !!user.isBlocked;
         const initial = (user.name || 'S').charAt(0).toUpperCase();
-        const formattedDate = user.registeredAt 
+        const formattedDate = user.registeredAt
             ? new Date(user.registeredAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
             : 'Recent';
 
@@ -329,13 +329,13 @@ function renderAdminUserTable() {
 
         return `
         <tr class="border-b border-slate-200/60 dark:border-slate-800/80 hover:bg-slate-500/5 transition-colors ${isBlocked ? 'bg-rose-500/5 dark:bg-rose-950/20' : ''}">
-            
+
             <!-- Student Avatar & Name -->
             <td class="py-4 px-4 sm:px-6">
                 <div class="flex items-center gap-3">
                     <div class="relative w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-white shadow-sm overflow-hidden border-2 ${isBlocked ? 'border-rose-500' : 'border-sky-500/30'}" style="background: linear-gradient(135deg, #0ea5e9, #6366f1);">
-                        ${user.photoURL 
-                            ? `<img src="${user.photoURL}" alt="${user.name}" class="w-full h-full object-cover">` 
+                        ${user.photoURL
+                            ? `<img src="${user.photoURL}" alt="${user.name}" class="w-full h-full object-cover">`
                             : `<span>${initial}</span>`}
                     </div>
                     <div>
@@ -419,12 +419,12 @@ function renderAdminUserTable() {
             <!-- Admin Actions -->
             <td class="py-4 px-4 sm:px-6 text-right">
                 <div class="flex items-center justify-end gap-1.5">
-                    
+
                     <!-- Block / Unblock Toggle Button -->
-                    <button type="button" 
+                    <button type="button"
                         onclick="toggleAdminUserBlock('${user.id || user.uid}')"
-                        class="px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1 ${isBlocked 
-                            ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-500/20' 
+                        class="px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1 ${isBlocked
+                            ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-500/20'
                             : 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 hover:bg-rose-600 hover:text-white border border-rose-300 dark:border-rose-800/60'}"
                         title="${isBlocked ? 'Unblock and restore student access' : 'Block student from accessing platform'}">
                         ${isBlocked ? `
@@ -437,7 +437,7 @@ function renderAdminUserTable() {
                     </button>
 
                     <!-- Delete Student Button -->
-                    <button type="button" 
+                    <button type="button"
                         onclick="deleteAdminUser('${user.id || user.uid}')"
                         class="p-1.5 rounded-xl text-slate-400 hover:text-rose-500 hover:bg-rose-500/10 transition-colors"
                         title="Delete Student Record">
