@@ -1321,8 +1321,7 @@ html.dark-mode .wi-word-accent-alt {
 .card-browse,
 .card-library,
 .card-essays,
-.card-favorites,
-.card-community {
+.card-favorites {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1333,9 +1332,42 @@ html.dark-mode .wi-word-accent-alt {
 .card-browse:hover,
 .card-library:hover,
 .card-essays:hover,
-.card-favorites:hover,
-.card-community:hover {
+.card-favorites:hover {
     transform: translateY(-12px) scale(1.02);
+}
+
+/* ── Bento Grid 4-Card Layout ── */
+@media (min-width: 1024px) {
+    .section-cards {
+        display: grid !important;
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    }
+    .section-cards .card-browse {
+        grid-column: span 8 / span 8 !important;
+    }
+    .section-cards .card-library {
+        grid-column: span 4 / span 4 !important;
+    }
+    .section-cards .card-essays,
+    .section-cards .card-favorites,
+    .lg\:col-span-6 {
+        grid-column: span 6 / span 6 !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .section-cards {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    .section-cards .card-browse,
+    .section-cards .card-library {
+        grid-column: span 2 / span 2 !important;
+    }
+    .section-cards .card-essays,
+    .section-cards .card-favorites {
+        grid-column: span 1 / span 1 !important;
+    }
 }
 
 /* --- 1. Browse (Deep Space Blue Theme) --- */
@@ -1452,31 +1484,11 @@ html.dark-mode .wi-word-accent-alt {
     left: -50px;
 }
 
-/* --- 5. Community (Deep Emerald Theme) --- */
-.card-community {
-    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 20px 40px -10px rgba(5, 150, 105, 0.4);
-}
-
-.card-community:hover {
-    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 35px 60px -15px rgba(5, 150, 105, 0.6), 0 0 0 2px rgba(255, 255, 255, 0.2) inset;
-}
-
-.card-community .card-orb {
-    background: #34d399;
-    width: 200px;
-    height: 200px;
-    bottom: -50px;
-    left: 50%;
-}
-
 /* Ensure dark mode doesn't override these vibrant themes */
 html.dark-mode .card-browse,
 html.dark-mode .card-library,
 html.dark-mode .card-essays,
-html.dark-mode .card-favorites,
-html.dark-mode .card-community {
+html.dark-mode .card-favorites {
     border-color: rgba(255, 255, 255, 0.1);
 }
 

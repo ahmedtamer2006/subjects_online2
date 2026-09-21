@@ -583,7 +583,6 @@
                 <div style="display:flex; flex-direction: column; gap: 1rem;">
                     <h4 style="font-size:1.05rem;font-weight:700;color:#1e3a8a;margin:0 0 0.5rem 0;" class="mega-col-title">Platform</h4>
                     <a href="dashboard.html" class="mega-link">Home Dashboard</a>
-                    <a href="community.html" class="mega-link">🌐 Community</a>
                     <a href="browse.html" class="mega-link">Library & Materials</a>
                     <a href="essays.html" class="mega-link">Doctor Essays</a>
                     <a href="favorites.html" class="mega-link">My Favorites</a>
@@ -596,7 +595,6 @@
                     <a href="#" class="mega-link">Help Center & FAQ</a>
                     <a href="#" class="mega-link">Contact Support</a>
                     <a href="#" class="mega-link">Report a Bug</a>
-                    <a href="#" class="mega-link">Community Forum</a>
                     <a href="#" class="mega-link">System Status</a>
                 </div>
 
@@ -625,10 +623,8 @@
     </footer>
     `;
 
-    // Inject at top of body (skip on community.html)
-    if (currentPage !== 'community.html') {
-        document.body.insertAdjacentHTML('afterbegin', navHTML);
-    }
+    // Inject at top of body
+    document.body.insertAdjacentHTML('afterbegin', navHTML);
 
     // Scroll spy for Dashboard page navigation pill items
     if (isDashboardPage) {
@@ -654,8 +650,8 @@
         });
     }
 
-    // Inject footer only on dashboard (skip on community.html)
-    if ((currentPage === 'dashboard.html' || currentPage === '' || currentPage === '/') && currentPage !== 'community.html') {
+    // Inject footer only on dashboard
+    if (currentPage === 'dashboard.html' || currentPage === '' || currentPage === '/') {
         document.body.insertAdjacentHTML('beforeend', footerHTML);
     }
 
@@ -962,8 +958,8 @@
 
     // ── 10. INNER PAGE NAVBAR (always visible on non-dashboard pages) ──────────
     function initInnerPageNav() {
-        // On dashboard or community page: return early
-        if (currentPage === 'dashboard.html' || currentPage === '' || currentPage === '/' || currentPage === 'community.html') return;
+        // On dashboard page: return early
+        if (currentPage === 'dashboard.html' || currentPage === '' || currentPage === '/') return;
 
         const logoEl = document.getElementById('shared-nav-logo');
         const libBtn = document.getElementById('library-nav-btn');
