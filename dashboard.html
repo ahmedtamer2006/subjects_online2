@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard — Subjects Online</title>
 
-    <!-- Page Transition Script -->
+    <!-- Page Script -->
     <script src="js/page-transition.js"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="c19193c1-aaf3-477d-acd2-56be26abe5ec"></script>
     <link rel="stylesheet" href="css/tailwind-utilities.css">
 
 
@@ -348,46 +349,7 @@
                     </div>
                 </div>
 
-                <!-- 3. Study Planner (Spans full width) -->
-                <div
-                    class="bento-card bento-card-planner md:col-span-12 flex flex-col p-8 sm:p-10 relative overflow-hidden group">
 
-
-                    <div class="relative z-10 flex flex-col h-full max-h-[500px]">
-                        <h2 class="font-heading text-brand-textPrimary font-bold flex items-center gap-4 text-xl mb-8">
-                            <span class="bento-icon-glow"
-                                style="color: #8b5cf6; box-shadow: 0 0 20px rgba(139,92,246,0.4);">
-                                <svg class="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                                </svg>
-                            </span>
-                            Command Center
-                        </h2>
-
-                        <form id="planner-form" class="mb-6 relative z-20">
-                            <div class="relative flex items-center group/input">
-                                <div class="absolute left-4 flex items-center pointer-events-none">
-                                    <div class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></div>
-                                </div>
-                                <input type="text" id="planner-input" placeholder="Execute new directive..."
-                                    class="bento-cmd-input">
-                                <button type="submit" class="absolute right-2 bento-cmd-btn">
-                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        stroke-width="2.5">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-
-                        <div id="planner-list"
-                            class="flex flex-col overflow-y-auto pr-2 custom-scrollbar flex-1 relative z-10 -mx-4 px-4 pb-4">
-                            <!-- Injected by JS -->
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
