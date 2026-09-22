@@ -15,22 +15,22 @@ const MATERIALS = {
                                 num: 1,
                                 title: "m-d",
                                 lectures: [
-                                    // { id: 101, title: "Lect 4", type: "pdf", url:"materials/Pdfs/Accounting/First_Term/Chapter_1/Sum. Lect 5 (Eco) (S.O).pdf" },
-                                    // { id: 102, title: "Ch5", type: "video", url: "materials/Videos/Accounting/First Term/Chapter 1/Subjects Online_001_001.mp4" }
+                                    // { id: 101, title: "Lect 4", type: "pdf", url:"" },
+                                    // { id: 102, title: "Ch5", type: "video", url: "" }
                                 ]
                             },
                             {
                                 num: 2,
                                 title: "m-d",
                                 lectures: [
-                                    // { id: 103, title: "Ch6", type: "video", url: "materials/Videos/Accounting/First Term/Chapter 1/Subjects Online_001_001.mp4" }
+                                    // { id: 103, title: "Ch6", type: "video", url: "" }
                                 ]
                             },
                              {
                                 num: 3,
                                 title: "m-d",
                                 lectures: [
-                                    // { id: 103, title: "Ch6", type: "video", url: "materials/Videos/Accounting/First Term/Chapter 1/Subjects Online_001_001.mp4" }
+                                    // { id: 103, title: "Ch6", type: "video", url: "" }
                                 ]
                             }
                         ]
@@ -209,7 +209,7 @@ const MATERIALS = {
               content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Chapter 1", time: "",
                         weeks: [
                             {
                                 num: 1,
@@ -2211,13 +2211,13 @@ const MATERIALS = {
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Chapter 1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting'.pdf" },
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -3813,13 +3813,14 @@ const MATERIALS = {
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Chapter 1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -5015,13 +5016,14 @@ const MATERIALS = {
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Chapter 1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -6617,13 +6619,14 @@ const MATERIALS = {
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Chapter 1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
