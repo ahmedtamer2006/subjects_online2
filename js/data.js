@@ -2,7 +2,7 @@
    SUBJECTS ONLINE — Shared Data
    =================================================== */
 
-const MATERIALS = {
+const materials = {
     accounting: [
         {
             id: 'a1', title: 'Corporate Accounting', icon: '📊', color: '#dbeafe', accent: '#2563eb',
@@ -3819,7 +3819,7 @@ const MATERIALS = {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "/materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
 
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
@@ -5022,7 +5022,7 @@ const MATERIALS = {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "/materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
 
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
@@ -6625,7 +6625,7 @@ const MATERIALS = {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "/materials/Pdfs/Business/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
 
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
@@ -7109,7 +7109,7 @@ const DEFAULT_SECTION_DATA = {
                     num: 1,
                     title: "",
                     lectures: [
-                        // { id: 201, title: "Lec 3: Deep Dive into Core", type: "video", url: "materials/dummy.mp4" },
+                        // { id: 201, title: "Lec 3: Deep Dive into Core", type: "video", url: "/materials/dummy.mp4" },
                         // { id: 202, title: "Lec 4: Review Questions", type: "pdf", url: "" }
                     ]
                 }
@@ -7137,7 +7137,7 @@ const DEFAULT_SECTION_DATA = {
                     num: 1,
                     title: "",
                     lectures: [
-                        // { id: 1003, title: "Quiz 3: Deep Dive into Core", type: "video", url: "materials/dummy.mp4" },
+                        // { id: 1003, title: "Quiz 3: Deep Dive into Core", type: "video", url: "/materials/dummy.mp4" },
                         // { id: 1004, title: "Quiz 4: Review Questions", type: "pdf", url: "" }
                     ]
                 }
@@ -7165,7 +7165,7 @@ const DEFAULT_SECTION_DATA = {
                     num: 1,
                     title: "",
                     lectures: [
-                        // { id: 2003, title: "Section 3: Deep Dive into Core", type: "video", url: "materials/dummy.mp4" },
+                        // { id: 2003, title: "Section 3: Deep Dive into Core", type: "video", url: "/materials/dummy.mp4" },
                         // { id: 2004, title: "Section 4: Review Questions", type: "pdf", url: "" }
                     ]
                 }
@@ -7442,7 +7442,7 @@ function togglePin(id, btnEl) {
 
     // Find the item color data to restyle the button
     let itemAccent = '#0EA5E9', itemColor = '#F0F9FF';
-    for (const group of Object.values(MATERIALS)) {
+    for (const group of Object.values(materials)) {
         const found = group.find(g => g.id === id);
         if (found) {
             itemAccent = found.accent;
@@ -7514,7 +7514,7 @@ window.togglePdfLibrary = async function (event, btn, rawTitle, rawUrl, subjectI
             // Cache offline if supported
             if ('caches' in window && url) {
                 try {
-                    const cache = await caches.open('offline-materials');
+                    const cache = await caches.open('offline-/materials');
                     await cache.add(url);
                 } catch (e) {
                     console.log('Offline cache skipped:', e);
