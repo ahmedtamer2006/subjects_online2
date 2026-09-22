@@ -3819,7 +3819,7 @@ const MATERIALS = {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Economics/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "/materials/Pdfs/Economics/First_Term/Chapter_1/week1/Lect 1 Dr.Zatout.pdf" },
 
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
@@ -5022,7 +5022,7 @@ const MATERIALS = {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/Stat/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "/materials/Pdfs/Stat/First_Term/Chapter_1/week1/Lect 1 Dr.Zatout.pdf" },
 
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
@@ -6625,7 +6625,7 @@ const MATERIALS = {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "materials/Pdfs/custom/First_Term/Chapter_1/week1/lect_1_dr.zatout_'handwriting.pdf" },
+                                    { id: 101, title: "Lect 1 Dr.Zatout 'Handwriting'", type: "pdf", url: "/materials/Pdfs/custom/First_Term/Chapter_1/week1/Lect 1 Dr.Zatout.pdf" },
 
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
