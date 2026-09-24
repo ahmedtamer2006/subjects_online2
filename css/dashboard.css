@@ -4,18 +4,12 @@
 
 :root {
     --color-bg: #dbeafe;
-    /* كان F0F9FF — أعمق شوية */
     --color-card-bg: #eff6ff;
-    /* كان FFFFFF — مش أبيض خالص */
     --color-card-border: rgba(14, 165, 233, 0.30);
-    /* كان 0.15 — أوضح */
     --color-card-border-hover: rgba(14, 165, 233, 0.65);
     --color-text-primary: #060f1e;
-    /* كان 0C1A2E — أغمق */
     --color-text-secondary: #1e3a5f;
-    /* كان 475569 — أغمق وأوضح */
     --color-icon-bg: #bfdbfe;
-    /* كان E0F2FE — أغمق شوية */
     --color-grid-dots: transparent;
 
     /* Theme backgrounds */
@@ -25,23 +19,7 @@
     --app-glow-tl: radial-gradient(circle, rgba(56, 189, 248, 0.30) 0%, transparent 70%);
 }
 
-html.dark-mode {
-    --color-bg: #020617;
-    /* Slate-950 */
-    --color-card-bg: #0f172a;
-    /* Slate-900 */
-    --color-card-border: rgba(56, 189, 248, 0.15);
-    --color-card-border-hover: rgba(56, 189, 248, 0.4);
-    --color-text-primary: #f8fafc;
-    --color-text-secondary: #94a3b8;
-    --color-icon-bg: rgba(14, 165, 233, 0.05);
 
-    /* Sleek dark mode backgrounds */
-    --app-bg: #020617;
-    --app-bg-top: radial-gradient(ellipse at 50% 0%, rgba(15, 23, 42, 1) 0%, rgba(2, 6, 23, 0) 70%);
-    --app-glow-br: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
-    --app-glow-tl: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-}
 
 .app-bg-container {
     background: var(--app-bg);
@@ -67,7 +45,7 @@ html.dark-mode {
 .density-compact .bento-card,
 .density-compact .dash-premium-card,
 .density-compact .settings-card,
-.density-compact .section-cards > a,
+.density-compact .section-cards>a,
 .density-compact .card-browse {
     padding: 1.25rem !important;
     border-radius: 1.25rem !important;
@@ -130,17 +108,13 @@ html.dark-mode {
     box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1) !important;
 }
 
-html.dark-mode[data-progress-style="bar"] #progress-ring-wrapper {
-    background: rgba(15, 23, 42, 0.7) !important;
-    border-color: rgba(56, 189, 248, 0.25) !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
-}
+
 
 [data-progress-style="bar"] #progress-ring-wrapper svg {
     display: none !important;
 }
 
-[data-progress-style="bar"] #progress-ring-wrapper > div:not(#progress-tooltip) {
+[data-progress-style="bar"] #progress-ring-wrapper>div:not(#progress-tooltip) {
     position: static !important;
     width: 100% !important;
     display: flex !important;
@@ -161,7 +135,7 @@ html.dark-mode[data-progress-style="bar"] #progress-ring-wrapper {
     display: none !important;
 }
 
-[data-progress-style="minimal"] #progress-ring-wrapper > div:not(#progress-tooltip) {
+[data-progress-style="minimal"] #progress-ring-wrapper>div:not(#progress-tooltip) {
     position: static !important;
 }
 
@@ -200,13 +174,7 @@ main {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html.dark-mode .dash-premium-card {
-    background: var(--bg-card);
-    border-color: rgba(255, 255, 255, 0.08);
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
+
 
 .dash-premium-card:hover {
     transform: translateY(-4px);
@@ -217,11 +185,8 @@ html.dark-mode .dash-premium-card {
         inset 0 -1px 0 rgba(0, 0, 0, 0.02);
 }
 
-html.dark-mode .dash-premium-card:hover {
-    box-shadow:
-        0 20px 40px -10px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
+
+
 
 .dash-card-accent {
     position: absolute;
@@ -255,11 +220,7 @@ html.dark-mode .dash-premium-card:hover {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-html.dark-mode .dash-planner-input {
-    background: rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
+
 
 .dash-planner-input:focus {
     outline: none;
@@ -268,11 +229,7 @@ html.dark-mode .dash-planner-input {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.01);
 }
 
-html.dark-mode .dash-planner-input:focus {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: #60a5fa;
-    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
-}
+
 
 .dash-planner-input::placeholder {
     color: var(--text-secondary);
@@ -330,11 +287,7 @@ html.dark-mode .dash-planner-input:focus {
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
-html.dark-mode .dash-trend-up {
-    color: #34d399;
-    background: rgba(52, 211, 153, 0.15);
-    border-color: rgba(52, 211, 153, 0.25);
-}
+
 
 /* Stat Divider */
 .dash-stat-divider {
@@ -343,9 +296,7 @@ html.dark-mode .dash-trend-up {
     background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
 }
 
-html.dark-mode .dash-stat-divider {
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-}
+
 
 /* Gradient Text */
 .dash-gradient-text {
@@ -451,12 +402,7 @@ html.dark-mode .dash-stat-divider {
     padding: 2rem;
 }
 
-.dark-mode .material-card,
-.dark-mode .essay-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
+
 
 .material-card:hover,
 .essay-card:hover {
@@ -464,10 +410,7 @@ html.dark-mode .dash-stat-divider {
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-.dark-mode .material-card:hover,
-.dark-mode .essay-card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
+
 
 .card-accent {
     position: absolute;
@@ -492,9 +435,7 @@ html.dark-mode .dash-stat-divider {
     z-index: 0;
 }
 
-.dark-mode .card-glow {
-    opacity: 0.25;
-}
+
 
 .material-card:hover .card-glow,
 .essay-card:hover .card-glow {
@@ -502,10 +443,7 @@ html.dark-mode .dash-stat-divider {
     opacity: 0.7;
 }
 
-.dark-mode .material-card:hover .card-glow,
-.dark-mode .essay-card:hover .card-glow {
-    opacity: 0.4;
-}
+
 
 .card-inner {
     position: relative;
@@ -528,10 +466,7 @@ html.dark-mode .dash-stat-divider {
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.dark-mode .card-icon-wrap {
-    background: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+
 
 .emoji-icon {
     font-size: 1.5rem;
@@ -559,45 +494,7 @@ html.dark-mode .dash-stat-divider {
     filter: blur(14px) !important;
 }
 
-/* Dark mode — icon layers */
-.dark-mode .card-icon-container .card-icon {
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.85)) !important;
-    box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.06), inset 0 -1px 3px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(0, 0, 0, 0.3) !important;
-}
 
-/* Dark mode — action buttons */
-.dark-mode .material-card .action-btn {
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.6)) !important;
-    border-color: rgba(148, 163, 184, 0.15) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(12px);
-}
-
-.dark-mode .material-card .action-btn:not(.active) {
-    color: rgba(203, 213, 225, 0.7) !important;
-}
-
-.dark-mode .material-card .action-btn:hover {
-    background: linear-gradient(145deg, rgba(51, 65, 85, 0.9), rgba(30, 41, 59, 0.7)) !important;
-    border-color: rgba(96, 165, 250, 0.3) !important;
-    color: rgba(224, 231, 240, 0.95) !important;
-    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-    transform: scale(1.12);
-}
-
-.dark-mode .material-card .pin-btn.active {
-    background: linear-gradient(145deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1)) !important;
-    border-color: rgba(96, 165, 250, 0.3) !important;
-    color: #60a5fa !important;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-}
-
-.dark-mode .material-card .fav-btn.active {
-    background: linear-gradient(145deg, rgba(244, 63, 94, 0.2), rgba(225, 29, 72, 0.12)) !important;
-    border-color: rgba(244, 63, 94, 0.4) !important;
-    color: #fb7185 !important;
-    box-shadow: 0 0 12px rgba(244, 63, 94, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-}
 
 /* Light mode — action button hover */
 .material-card .action-btn {
@@ -620,9 +517,7 @@ html.dark-mode .dash-stat-divider {
     transition: color 0.3s;
 }
 
-.dark-mode .card-title {
-    color: #f8fafc;
-}
+
 
 .card-desc {
     font-size: 0.875rem;
@@ -631,10 +526,6 @@ html.dark-mode .dash-stat-divider {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     flex: 1;
-}
-
-.dark-mode .card-desc {
-    color: rgba(148, 163, 184, 0.9);
 }
 
 .card-cta {
@@ -650,10 +541,6 @@ html.dark-mode .dash-stat-divider {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all 0.3s;
-}
-
-.dark-mode .card-cta {
-    background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .icon-arrow {
@@ -677,17 +564,9 @@ html.dark-mode .dash-stat-divider {
     padding: 0;
 }
 
-.dark-mode .fav-btn {
-    color: rgba(255, 255, 255, 0.2);
-}
-
 .fav-btn:hover {
     transform: scale(1.15);
     color: rgba(15, 23, 42, 0.4);
-}
-
-.dark-mode .fav-btn:hover {
-    color: rgba(255, 255, 255, 0.5);
 }
 
 .fav-btn.active {
@@ -709,10 +588,6 @@ html.dark-mode .dash-stat-divider {
     align-self: flex-start;
 }
 
-.dark-mode .essay-card .tag {
-    background: rgba(255, 255, 255, 0.08) !important;
-}
-
 .essay-meta {
     display: flex;
     align-items: center;
@@ -721,27 +596,15 @@ html.dark-mode .dash-stat-divider {
     border-top: 1px solid rgba(59, 130, 246, 0.1);
 }
 
-.dark-mode .essay-meta {
-    border-top-color: rgba(255, 255, 255, 0.05);
-}
-
 .meta-author {
     font-size: 0.75rem;
     font-weight: 700;
     color: #1e3a8a;
 }
 
-.dark-mode .meta-author {
-    color: #e2e8f0;
-}
-
 .meta-date {
     font-size: 0.7rem;
     color: #60a5fa;
-}
-
-.dark-mode .meta-date {
-    color: #94a3b8;
 }
 
 .meta-badge {
@@ -750,10 +613,6 @@ html.dark-mode .dash-stat-divider {
     padding: 4px 10px;
     border-radius: 999px;
     border: 1px solid;
-}
-
-.dark-mode .meta-badge {
-    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* ========== PAGE BACK BUTTON ========== */
@@ -770,141 +629,6 @@ html.dark-mode .dash-stat-divider {
 
 .back-btn:hover {
     gap: 0.8rem;
-}
-
-/* ── GSAP Stroke Drawing SVG Name ─────────────────── */
-.gsap-name-svg {
-    height: 1.3em;
-    width: auto;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    overflow: visible !important;
-    transition: filter 0.8s ease;
-}
-
-.gsap-stroke-letter {
-    will-change: stroke-dashoffset, fill, stroke;
-}
-
-/* ── Name Ambient Aura & Sparkles ─────────────────── */
-.name-ambient-aura {
-    position: absolute;
-    width: 120%;
-    height: 180%;
-    top: -40%;
-    left: -10%;
-    border-radius: 999px;
-    background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.12) 45%, transparent 70%);
-    filter: blur(25px);
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0;
-    transform: scale(0.85);
-    animation: nameAuraPulse 6s ease-in-out infinite alternate;
-}
-
-@keyframes nameAuraPulse {
-    0% {
-        opacity: 0.35;
-        transform: scale(0.9) rotate(0deg);
-        filter: blur(22px);
-    }
-
-    50% {
-        opacity: 0.75;
-        transform: scale(1.1) rotate(2deg);
-        filter: blur(30px);
-    }
-
-    100% {
-        opacity: 0.45;
-        transform: scale(0.95) rotate(-2deg);
-        filter: blur(24px);
-    }
-}
-
-html.dark-mode .name-ambient-aura {
-    background: radial-gradient(ellipse at center, rgba(192, 132, 252, 0.3) 0%, rgba(244, 114, 182, 0.18) 50%, transparent 70%);
-}
-
-/* ── Laser Underline Beam ─────────────────────────── */
-.hero-laser-wrap {
-    position: relative;
-    width: 260px;
-    max-width: 85vw;
-    height: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-}
-
-.hero-laser-line {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent 0%, #a855f7 20%, #ec4899 50%, #f97316 80%, transparent 100%);
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(236, 72, 153, 0.3);
-    border-radius: 999px;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    overflow: visible;
-}
-
-.hero-laser-line.laser-active {
-    transform: scaleX(1);
-}
-
-.hero-laser-sweep {
-    position: absolute;
-    top: -2px;
-    left: 0;
-    width: 30%;
-    height: 6px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, transparent, #c084fc, #FFFFFF, #f472b6, transparent);
-    box-shadow: 0 0 12px #c084fc, 0 0 24px #a855f7;
-    opacity: 0.9;
-    animation: laserSweep 3.5s ease-in-out infinite alternate;
-}
-
-@keyframes laserSweep {
-    0% {
-        left: 5%;
-        opacity: 0.4;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        left: 65%;
-        opacity: 0.4;
-    }
-}
-
-.hero-laser-dot {
-    position: absolute;
-    top: -3px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #c084fc;
-    box-shadow: 0 0 12px #c084fc, 0 0 20px #a855f7;
-    opacity: 0.8;
-}
-
-.laser-dot-left {
-    left: 0;
-    transform: translateX(-50%);
-}
-
-.laser-dot-right {
-    right: 0;
-    transform: translateX(50%);
 }
 
 /* ========== PANEL ANIMATION ========== */
@@ -1195,9 +919,8 @@ html.dark-mode .name-ambient-aura {
     }
 }
 
-.dark-mode #hero-quote {
-    color: rgba(148, 163, 184, 0.7);
-}
+
+
 
 /* ═══════════════════════════════════════════════════
    WHAT'S INSIDE — PREMIUM GLASS CARD
@@ -1243,11 +966,8 @@ html.dark-mode .name-ambient-aura {
     background-clip: text;
 }
 
-html.dark-mode .wi-word-accent {
-    background: linear-gradient(135deg, #38bdf8 0%, #67e8f9 60%, #a5b4fc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-}
+
+
 
 /* ── Divider ── */
 .wi-divider {
@@ -1299,11 +1019,7 @@ html.dark-mode .wi-word-accent {
     background-clip: text;
 }
 
-html.dark-mode .wi-word-accent-alt {
-    background: linear-gradient(135deg, #fb923c 0%, #fb7185 60%, #c084fc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-}
+
 
 .wi-divider-line-alt {
     background: linear-gradient(90deg, transparent, #f97316, #f43f5e, #a855f7, transparent) !important;
@@ -1342,12 +1058,15 @@ html.dark-mode .wi-word-accent-alt {
         display: grid !important;
         grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
     }
+
     .section-cards .card-browse {
         grid-column: span 8 / span 8 !important;
     }
+
     .section-cards .card-library {
         grid-column: span 4 / span 4 !important;
     }
+
     .section-cards .card-essays,
     .section-cards .card-favorites,
     .lg\:col-span-6 {
@@ -1360,10 +1079,12 @@ html.dark-mode .wi-word-accent-alt {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
+
     .section-cards .card-browse,
     .section-cards .card-library {
         grid-column: span 2 / span 2 !important;
     }
+
     .section-cards .card-essays,
     .section-cards .card-favorites {
         grid-column: span 1 / span 1 !important;
@@ -1484,13 +1205,7 @@ html.dark-mode .wi-word-accent-alt {
     left: -50px;
 }
 
-/* Ensure dark mode doesn't override these vibrant themes */
-html.dark-mode .card-browse,
-html.dark-mode .card-library,
-html.dark-mode .card-essays,
-html.dark-mode .card-favorites {
-    border-color: rgba(255, 255, 255, 0.1);
-}
+
 
 /* ════════════════════════════════════════════════
    BENTO BOX LUXURY DASHBOARD (Analytics, Weekly, Planner, Recommended)
@@ -1547,30 +1262,23 @@ html.dark-mode .card-favorites {
     border: 1px solid rgba(59, 130, 246, 0.2);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.06);
 }
-html.dark-mode .pillar-blue {
-    background: rgba(59, 130, 246, 0.12);
-    border-color: rgba(59, 130, 246, 0.25);
-}
+
+
 
 .pillar-purple {
     background: rgba(139, 92, 246, 0.06);
     border: 1px solid rgba(139, 92, 246, 0.2);
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.06);
 }
-html.dark-mode .pillar-purple {
-    background: rgba(139, 92, 246, 0.12);
-    border-color: rgba(139, 92, 246, 0.25);
-}
+
+
 
 .pillar-rose {
     background: rgba(244, 63, 94, 0.06);
     border: 1px solid rgba(244, 63, 94, 0.2);
     box-shadow: 0 4px 15px rgba(244, 63, 94, 0.06);
 }
-html.dark-mode .pillar-rose {
-    background: rgba(244, 63, 94, 0.12);
-    border-color: rgba(244, 63, 94, 0.25);
-}
+
 
 .analytics-pillar-tube {
     width: 12px;
@@ -1585,10 +1293,7 @@ html.dark-mode .pillar-rose {
     margin: 0.6rem 0;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-html.dark-mode .analytics-pillar-tube {
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
-}
+
 
 .analytics-pillar-fill {
     width: 100%;
@@ -1596,13 +1301,7 @@ html.dark-mode .analytics-pillar-tube {
     transition: height 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html.dark-mode .bento-card {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.3) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:
-        0 30px 60px -15px rgba(0, 0, 0, 0.6),
-        inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
+
 
 .bento-card:hover {
     transform: translateY(-8px) scale3d(1.01, 1.01, 1.01);
@@ -1612,12 +1311,7 @@ html.dark-mode .bento-card {
     border-color: rgba(255, 255, 255, 0.8);
 }
 
-html.dark-mode .bento-card:hover {
-    box-shadow:
-        0 40px 80px -15px rgba(0, 0, 0, 0.8),
-        inset 0 1px 3px rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.3);
-}
+
 
 /* Glass Reflection Overlay */
 .bento-card::before {
@@ -1630,9 +1324,7 @@ html.dark-mode .bento-card:hover {
     z-index: 2;
 }
 
-html.dark-mode .bento-card::before {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 60%);
-}
+
 
 /* Background Mesh Gradients - Beautiful Orbs */
 .bento-mesh-bg {
@@ -1644,20 +1336,24 @@ html.dark-mode .bento-card::before {
     pointer-events: none;
     will-change: transform;
     background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.3), transparent 60%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2), transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2), transparent 50%);
     filter: blur(40px);
 }
 
-html.dark-mode .bento-mesh-bg {
-    opacity: 0.8;
-    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 60%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1), transparent 50%);
-}
+
 
 @keyframes bentoRotate {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.1); }
-    100% { transform: rotate(360deg) scale(1); }
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
 }
 
 /* Animated Shine Sweep */
@@ -1674,14 +1370,20 @@ html.dark-mode .bento-mesh-bg {
     pointer-events: none;
 }
 
-html.dark-mode .bento-shine {
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
-}
+
 
 @keyframes bentoShine {
-    0% { left: -150%; }
-    20% { left: 200%; }
-    100% { left: 200%; }
+    0% {
+        left: -150%;
+    }
+
+    20% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
 }
 
 /* Icon Badges (Floating 3D style) */
@@ -1705,11 +1407,7 @@ html.dark-mode .bento-shine {
     transform: scale(1.1) rotate(-5deg);
 }
 
-html.dark-mode .bento-icon-glow {
-    background: rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1), 0 10px 20px rgba(0, 0, 0, 0.3);
-}
+
 
 /* Command Palette Input (Mac Spotlight Style) */
 .bento-cmd-input {
@@ -1728,12 +1426,7 @@ html.dark-mode .bento-icon-glow {
         0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-html.dark-mode .bento-cmd-input {
-    background: rgba(15, 23, 42, 0.6);
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.3);
-    color: #f8fafc;
-}
+
 
 .bento-cmd-input:focus {
     outline: none;
@@ -1745,10 +1438,7 @@ html.dark-mode .bento-cmd-input {
     transform: translateY(-2px) scale(1.01);
 }
 
-html.dark-mode .bento-cmd-input:focus {
-    background: rgba(30, 41, 59, 0.9);
-    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.3), 0 20px 40px rgba(0, 0, 0, 0.5);
-}
+
 
 .bento-cmd-btn {
     width: 2.75rem;
@@ -1781,24 +1471,22 @@ html.dark-mode .bento-cmd-input:focus {
     height: 14px;
     background: rgba(15, 23, 42, 0.05);
     border-radius: 99px;
-    overflow: visible; /* Allow glow to spill out */
+    overflow: visible;
+    /* Allow glow to spill out */
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(255, 255, 255, 0.8);
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.02);
     overflow: hidden;
 }
 
-html.dark-mode .bento-prog-bar-container {
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.05);
-}
+
 
 .bento-prog-bar-fill {
     height: 100%;
     border-radius: 99px;
     position: relative;
-    box-shadow: 0 0 15px currentColor; /* Neon glow */
+    box-shadow: 0 0 15px currentColor;
+    /* Neon glow */
 }
 
 .bento-prog-bar-fill::before {
@@ -1822,8 +1510,13 @@ html.dark-mode .bento-prog-bar-container {
 }
 
 @keyframes barShine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 /* Task Item (Floating Glass Pill) */
@@ -1837,12 +1530,6 @@ html.dark-mode .bento-prog-bar-container {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02), inset 0 1px 2px rgba(255, 255, 255, 1);
 }
 
-html.dark-mode .bento-task-item {
-    background: rgba(30, 41, 59, 0.4);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.05);
-}
-
 .bento-task-item:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateX(8px) scale(1.02);
@@ -1850,27 +1537,6 @@ html.dark-mode .bento-task-item {
     border-color: rgba(139, 92, 246, 0.3);
 }
 
-html.dark-mode .bento-task-item:hover {
-    background: rgba(30, 41, 59, 0.8);
-    border-color: rgba(139, 92, 246, 0.4);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
-
-/* Recommended Item */
-.bento-rec-item {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    border-radius: 1.5rem;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), inset 0 1px 2px rgba(255, 255, 255, 1);
-}
-
-html.dark-mode .bento-rec-item {
-    background: rgba(30, 41, 59, 0.5);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.05);
-}
 
 .bento-rec-item:hover {
     transform: translateY(-4px) scale(1.02);
@@ -1879,200 +1545,7 @@ html.dark-mode .bento-rec-item {
     border-color: rgba(14, 165, 233, 0.3);
 }
 
-html.dark-mode .bento-rec-item:hover {
-    background: rgba(30, 41, 59, 0.9);
-    border-color: rgba(14, 165, 233, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
-
-/* =====================================================
-   HERO ENHANCEMENTS — Gradient Ring, Particles, Beams
-   ===================================================== */
-
-/* ── Laser Split SVG Ring & Hologram ──────────────── */
-.hero-avatar-svg-ring {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    z-index: 15;
-    pointer-events: none;
-    overflow: visible;
-}
-
-.ring-arc-path {
-    will-change: stroke-dashoffset;
-}
-
-/* Hologram Glitch Container & Scanlines */
-.hero-avatar-img-wrap {
-    position: relative;
-    box-shadow:
-        0 0 0 4px var(--color-bg),
-        0 0 50px rgba(14, 165, 233, 0.25),
-        0 20px 40px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 0.5s, transform 1s;
-}
-
-.holo-scanlines {
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: repeating-linear-gradient(0deg,
-            rgba(14, 165, 233, 0.18) 0px,
-            rgba(14, 165, 233, 0.18) 2px,
-            transparent 2px,
-            transparent 5px);
-    z-index: 12;
-    pointer-events: none;
-    opacity: 0.6;
-}
-
-.holo-beam-sweep {
-    position: absolute;
-    top: -100%;
-    left: -20%;
-    width: 140%;
-    height: 40%;
-    background: linear-gradient(180deg, transparent, rgba(56, 189, 248, 0.5), transparent);
-    z-index: 13;
-    pointer-events: none;
-    opacity: 0;
-}
-
-/* Sci-Fi Hologram Cyan Tint on Avatar */
-.holo-avatar-img {
-    will-change: filter, opacity, transform;
-}
-
-.holo-avatar-img.holo-flicker {
-    filter: brightness(1.8) contrast(1.4) hue-rotate(170deg) drop-shadow(0 0 12px #38BDF8);
-}
-
-/* ── Radial Light Beams ────────────────────────────── */
-.hero-beams {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.12;
-}
-
-html.dark-mode .hero-beams {
-    opacity: 0.08;
-}
-
-.hero-beam {
-    position: absolute;
-    width: 3px;
-    height: 280px;
-    background: linear-gradient(to top, transparent, #0EA5E9, transparent);
-    top: 50%;
-    left: 50%;
-    transform-origin: bottom center;
-    border-radius: 999px;
-    animation: heroBeamPulse 4s ease-in-out infinite alternate;
-}
-
-.hero-beam:nth-child(1) {
-    transform: rotate(0deg) translateY(-140px);
-    animation-delay: 0s;
-}
-
-.hero-beam:nth-child(2) {
-    transform: rotate(45deg) translateY(-140px);
-    animation-delay: 0.5s;
-}
-
-.hero-beam:nth-child(3) {
-    transform: rotate(90deg) translateY(-140px);
-    animation-delay: 1s;
-}
-
-.hero-beam:nth-child(4) {
-    transform: rotate(135deg) translateY(-140px);
-    animation-delay: 1.5s;
-}
-
-.hero-beam:nth-child(5) {
-    transform: rotate(180deg) translateY(-140px);
-    animation-delay: 2s;
-}
-
-.hero-beam:nth-child(6) {
-    transform: rotate(225deg) translateY(-140px);
-    animation-delay: 2.5s;
-}
-
-.hero-beam:nth-child(7) {
-    transform: rotate(270deg) translateY(-140px);
-    animation-delay: 3s;
-}
-
-.hero-beam:nth-child(8) {
-    transform: rotate(315deg) translateY(-140px);
-    animation-delay: 3.5s;
-}
-
-@keyframes heroBeamPulse {
-    0% {
-        opacity: 0.4;
-        transform: rotate(var(--r, 0deg)) translateY(-140px) scaleX(1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotate(var(--r, 0deg)) translateY(-140px) scaleX(1.5);
-    }
-}
-
-/* ── Floating Particles ────────────────────────────── */
-.hero-particles {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-particle {
-    position: absolute;
-    border-radius: 50%;
-    background: #0EA5E9;
-    pointer-events: none;
-    animation: heroParticleFloat linear infinite;
-    opacity: 0;
-}
-
-@keyframes heroParticleFloat {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0) scale(0);
-    }
-
-    15% {
-        opacity: 1;
-    }
-
-    85% {
-        opacity: 0.6;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(var(--tx, 60px), var(--ty, -80px)) scale(0.3);
-    }
-}
-
 /* ── Avatar image wrapper shadow ──────────────────── */
-.hero-avatar-img-wrap {
-    box-shadow:
-        0 0 0 4px var(--color-bg),
-        0 0 50px rgba(14, 165, 233, 0.25),
-        0 20px 40px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 0.5s, transform 1s;
-}
 
 .hero-avatar-img-wrap:hover,
 .hero-avatar:hover .hero-avatar-img-wrap {
@@ -2082,100 +1555,6 @@ html.dark-mode .hero-beams {
         0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
-/* ── Typing Cursor ─────────────────────────────────── */
-.hero-name-typed {
-    min-height: 1.2em;
-}
-
-html.dark-mode .hero-name-typed {
-    /* No special background clip, GSAP SVG handles colors */
-}
-
-/* ── Avatar Bubble Pop Animation ─────────────────────────────────── */
-@keyframes bubblePop {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-        filter: blur(10px);
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 1;
-        filter: blur(0px);
-    }
-    70% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.animate-bubble-pop {
-    animation: bubblePop 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.hero-cursor {
-    display: inline-block;
-    color: #a855f7;
-    font-weight: 100;
-    margin-left: 2px;
-    animation: heroCursorBlink 0.9s step-end infinite;
-}
-
-.hero-cursor.hidden {
-    visibility: hidden;
-}
-
-@keyframes heroCursorBlink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-/* ═══════════════════════════════════════════════════════
-   FULL VIEWPORT HERO HEADER STYLES
-   ═══════════════════════════════════════════════════════ */
-
-.hero-container {
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        min-height: 100vh !important;
-        padding-top: 80px !important;
-        padding-bottom: 40px !important;
-    }
-}
-
-/* ── Waving Hand / Greeting Animation ── */
-@keyframes wave-hand-anim {
-    0% { transform: rotate(0deg); }
-    15% { transform: rotate(18deg); }
-    30% { transform: rotate(-12deg); }
-    45% { transform: rotate(18deg); }
-    60% { transform: rotate(-8deg); }
-    75% { transform: rotate(12deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.wave-hand-animated {
-    display: inline-block;
-    transform-origin: 70% 70%;
-    animation: wave-hand-anim 2.2s infinite ease-in-out;
-}
 
 /* ── ULTRA-LUXURY HERO HEADER DESIGN ── */
 .hero-welcome-label {
@@ -2185,9 +1564,7 @@ html.dark-mode .hero-name-typed {
     transition: all 0.4s ease;
 }
 
-html.dark-mode .hero-welcome-label {
-    color: #f8fafc;
-}
+
 
 #display-name-text {
     color: #0ea5e9;
@@ -2196,9 +1573,6 @@ html.dark-mode .hero-welcome-label {
     transition: all 0.3s ease;
 }
 
-html.dark-mode #display-name-text {
-    color: #38bdf8;
-}
 
 .hero-name-glow {
     position: relative;
@@ -2231,14 +1605,6 @@ html.dark-mode #display-name-text {
         0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-html.dark-mode .hero-dept-pill {
-    background: rgba(15, 23, 42, 0.75);
-    border-color: rgba(56, 189, 248, 0.3);
-    box-shadow:
-        0 15px 35px -5px rgba(0, 0, 0, 0.5),
-        inset 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-
 /* =====================================================
    MOBILE FIX — Analytics Bars
    Ensures PDF/Video progress bars remain visible on phones
@@ -2250,7 +1616,7 @@ html.dark-mode .hero-dept-pill {
         min-height: 300px !important;
     }
 
-    .bento-card-analytics > div {
+    .bento-card-analytics>div {
         height: auto !important;
         min-height: 0 !important;
     }
@@ -2265,7 +1631,7 @@ html.dark-mode .hero-dept-pill {
         visibility: visible !important;
     }
 
-    #bento-analytics-bars > div {
+    #bento-analytics-bars>div {
         display: block !important;
         width: 100% !important;
         opacity: 1 !important;

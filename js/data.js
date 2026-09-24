@@ -5,7 +5,7 @@
 const MATERIALS = {
     accounting: [
         {
-            id: 'a1', title: 'Corporate Accounting', icon: '📊', color: '#dbeafe', accent: '#2563eb',
+            id: 'a1', title: 'companies Accounting', icon: '📊', color: '#dbeafe', accent: '#2563eb',
             content: {
                 chapters: [
                     {
@@ -609,14 +609,14 @@ const MATERIALS = {
   content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Ch1:Intro", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
-                                    // { id: 102, title: "", type: "video", url: "" }
+                                    { id: 101, title: "Lect1(Dr.Samar)", type: "pdf", url: "materials/Pdfs/Accounting/First Term/Chapter 1/week1/QBA_lect1_(Dr.Samar).pdf" },
+                                    { id: 102, title: "Lect 1(Dr.samar)", type: "video", url: "materials/Videos/Accounting/First Term/Chapter 1/week1/lect_1_(dr.samar).mp4" }
                                 ]
                             },
                             {
@@ -805,17 +805,17 @@ const MATERIALS = {
                 ]
             }
          },
-        { id: 'a5', title: 'Principles of Financial Management', icon: '💰', color: '#fee2e2', accent: '#dc2626',
+        { id: 'a5', title: 'Financial Management', icon: '💰', color: '#fee2e2', accent: '#dc2626',
               content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Ch1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect1(Dr.Wessam)'Handwriting'", type: "pdf", url: "materials/Pdfs/Accounting/First Term/Chapter 1/week1/FM_lect_1_(Dr.Wessam)_'handwriting'.pdf" },
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -1411,14 +1411,14 @@ const MATERIALS = {
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Ch1:Intro", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
-                                    // { id: 102, title: "", type: "video", url: "" }
+                                    { id: 101, title: "Lect1(Dr.Samar)", type: "pdf", url: "materials/Pdfs/Accounting/First Term/Chapter 1/week1/QBA_lect1_(Dr.Samar).pdf" },
+                                    { id: 102, title: "Lect 1 (Dr.Samar)", type: "video", url: "materials/Videos/Accounting/First Term/Chapter 1/week1/lect_1_(dr.samar).mp4" }
                                 ]
                             },
                             {
@@ -1607,17 +1607,17 @@ const MATERIALS = {
                 ]
             }
         },
-        { id: 'b2', title: 'Principles of Financial Management', icon: '💰', color: '#fce7f3', accent: '#db2777',
+        { id: 'b2', title: 'Financial Management', icon: '💰', color: '#fce7f3', accent: '#db2777',
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Ch1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect1(Dr.Wessam)'Handwriting'", type: "pdf", url: "/materials/Pdfs/Accounting/First Term/Chapter 1/week1/FM_lect_1_(Dr.Wessam)_'handwriting'.pdf" },
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -2007,17 +2007,17 @@ const MATERIALS = {
                 ]
             }
         },
-        { id: 'b4', title: 'Corporate Accounting', icon: '📊', color: '#dcfce7', accent: '#16a34a',
+        { id: 'b4', title: 'companies Accounting', icon: '📊', color: '#dcfce7', accent: '#16a34a',
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Ch1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect1(Dr.Saeed)'Handwriting'", type: "pdf", url: "materials/Pdfs/Business/First_Term/Chapter_1/week1/CA_lect_1_(Dr.Saeed)_'handwriting'.pdf" },
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -6415,17 +6415,17 @@ const MATERIALS = {
                 ]
             }
         },
-        { id: 'c5', title: 'Principles of Insurance', icon: '🛡️', color: '#fee2e2', accent: '#dc2626',
+        { id: 'c5', title: 'companies accounting', icon: '🛡️', color: '#fee2e2', accent: '#dc2626',
             content: {
                 chapters: [
                     {
-                        num: 1, title: "", time: "",
+                        num: 1, title: "Ch1", time: "",
                         weeks: [
                             {
                                 num: 1,
                                 title: "",
                                 lectures: [
-                                    // { id: 101, title: "", type: "pdf", url: "" },
+                                    { id: 101, title: "Lect1(Dr.Saeed)'Handwriting'", type: "pdf", url: "/materials/Pdfs/Business/First_Term/Chapter_1/week1/CA_lect_1_(Dr.Saeed)_'handwriting'.pdf" },
                                     // { id: 102, title: "", type: "video", url: "" }
                                 ]
                             },
@@ -7022,7 +7022,7 @@ const MATERIALS = {
 const ESSAYS = [
     // { id: 'es1', title: 'The Impact of Digital Transformation on Commerce Education', doctor: 'Dr. Mohamed Hassan', tag: 'Technology', tagColor: '#dbeafe', tagText: '#1d4ed8', desc: 'An in-depth analysis of how digital tools are reshaping the future of business and commerce education in Egypt and globally.', readTime: '8 min read', date: 'June 2025' },
     // { id: 'es2', title: 'Behavioral Economics: Why Students Make Irrational Financial Decisions', doctor: 'Dr. Sara Khalil', tag: 'Economics', tagColor: '#dcfce7', tagText: '#15803d', desc: 'Exploring psychological biases that affect students and young adults in their everyday financial choices.', readTime: '6 min read', date: 'May 2025' },
-    // { id: 'es3', title: 'ESG Reporting: The New Frontier of Corporate Accountability', doctor: 'Dr. Ahmed Nour', tag: 'Accounting', tagColor: '#ede9fe', tagText: '#6d28d9', desc: 'How environmental, social and governance disclosures are reshaping audit practices and investor relations worldwide.', readTime: '10 min read', date: 'April 2025' },
+    // { id: 'es3', title: 'ESG Reporting: The New Frontier of companies Accountability', doctor: 'Dr. Ahmed Nour', tag: 'Accounting', tagColor: '#ede9fe', tagText: '#6d28d9', desc: 'How environmental, social and governance disclosures are reshaping audit practices and investor relations worldwide.', readTime: '10 min read', date: 'April 2025' },
     // { id: 'es4', title: 'Big Data Analytics: Opportunities for Statistics Students', doctor: 'Dr. Laila Mansour', tag: 'Statistics', tagColor: '#fef9c3', tagText: '#a16207', desc: 'A guide to how statistics students can leverage modern big data tools to enter the highest-paying data science roles.', readTime: '7 min read', date: 'March 2025' },
 ];
 
