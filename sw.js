@@ -3,8 +3,8 @@
 // =============================================
 
 // ⚠️ زودنا الإصدار عشان أي Service Worker قديم يتحدث
-const CACHE_NAME = 'subjects-online-v4';
-const DYNAMIC_CACHE = 'subjects-online-dynamic-v4';
+const CACHE_NAME = 'subjects-online-v5';
+const DYNAMIC_CACHE = 'subjects-online-dynamic-v5';
 
 // =============================================
 // STATIC ASSETS
