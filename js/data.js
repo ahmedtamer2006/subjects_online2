@@ -1818,7 +1818,7 @@ const MATERIALS = {
                                 title: "",
                                 lectures: [
                                     // { id: 101, title: "", type: "pdf", url: "" },
-                                    { id: 102, title: "", type: "video", url: "/materials/Videos/Business/First_Term/Chapter_1/week1/Lect1_(PA)_(Dr.Aya).mp4" }
+                                    { id: 102, title: "", type: "video", url: "materials/Videos/Business/First_Term/Chapter_1/week1/Lect1_(PA)_(Dr.Aya).mp4" }
                                 ]
                             },
                             {
