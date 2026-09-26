@@ -1807,7 +1807,7 @@ const MATERIALS = {
                 ]
             }
         },
-        { id: 'b3', title: 'Public Institutions Management', icon: '🏛️', color: '#ede9fe', accent: '#7c3aed',
+        { id: 'b3', title: 'Public Adminstartion', icon: '🏛️', color: '#ede9fe', accent: '#7c3aed',
             content: {
                 chapters: [
                     {
@@ -1818,7 +1818,7 @@ const MATERIALS = {
                                 title: "",
                                 lectures: [
                                     // { id: 101, title: "", type: "pdf", url: "" },
-                                    // { id: 102, title: "", type: "video", url: "" }
+                                    { id: 102, title: "", type: "video", url: "/materials/Videos/Business/First_Term/Chapter_1/week1/Lect1_(PA)_(Dr.Aya).mp4" }
                                 ]
                             },
                             {
